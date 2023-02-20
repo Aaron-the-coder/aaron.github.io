@@ -1,4 +1,13 @@
 ---
 title: Welcome to my blog
 ---
-This is a tech blog. Thank you for watching!
+# MockK
+## Basic Syntax
+- every: get a certain result for every operation
+- eq: equal, can be omit because a number itself can mean equal. eg: every { mock.call(more(5), 6) } returns 1
+// is same as
+every { mock.call(more(5), eq(6)) } returns 1
+- returnsMany: return a number of result. eg: every { mock1.call(5) } returnsMany listOf(1, 2, 3)
+- andThen: indicate the following operations. eg: every { mock1.call(5) } returns 1 andThen 2 andThen 3
+- just Runs: use it when the return value is null. eg: every { mock1.callReturningUnit(5) } just Runs
+- When the return value is a lamda expretion, use "answers". eg: every { mock1.call(5) } answers { arg<Int>(0) + 5 }
