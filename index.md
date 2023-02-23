@@ -11,3 +11,4 @@ every { mock.call(more(5), eq(6)) } returns 1
 - andThen: indicate the following operations. eg: every { mock1.call(5) } returns 1 andThen 2 andThen 3
 - just Runs: use it when the return value is null. eg: every { mock1.callReturningUnit(5) } just Runs
 - When the return value is a lamda expretion, use "answers". eg: every { mock1.call(5) } answers { arg<Int>(0) + 5 }
+- Verify: to verify the a method's called times. We can add parameters to this keyword(adLeast:the minimum times the method should be called; atMost: the maximum times the method can be called; exactly: the exact times the method should be called.
