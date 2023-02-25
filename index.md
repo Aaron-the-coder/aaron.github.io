@@ -14,8 +14,10 @@ every { mock.call(more(5), eq(6)) } returns 1
 - Verify: to verify the a method's called times. We can add parameters to this keyword(adLeast:the minimum times the method should be called; atMost: the maximum times the method can be called; exactly: the exact times the method should be called.
 - wasNot called: this parameter can be added to the end of the method name in a "verify" block to verify a method is not called.
   - verifySequence: verify the excact sequence happened. eg:
-  ``` verifySequence {
+  ``` 
+  verifySequence {
   mock1.call(1)
   mock1.call(2)
   mock1.call(3)
-} ```
+  } 
+  ```
