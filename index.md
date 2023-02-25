@@ -21,3 +21,10 @@ every { mock.call(more(5), eq(6)) } returns 1
   mock1.call(3)
   } 
   ```
+- verifyOrder: verify the order happened, allowing gaps in between. eg:
+```
+verifyOrder {
+  mock1.call(1)
+  mock1.call(3)
+}
+```
